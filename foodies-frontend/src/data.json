@@ -1,0 +1,337 @@
+{
+    "data": [
+        {
+            "Quality": [
+                {
+                    "id": 1,
+                    "image": "./public/safe.png",
+                    "title": "Safe Food",
+                    "description": "lorem"
+                },
+                {
+                    "id": 2,
+                    "image": "./public/tasty.png",
+                    "title": "Tasty food",
+                    "description": "lorem"
+                },
+                {
+                    "id": 3,
+                    "image": "./public/tasty.png",
+                    "title": "On time delivery",
+                    "description": "lorem"
+                }
+            ],
+            "dishes": [
+                {
+                  "id": "4",
+                  "title": "Dark Chocolate Bark with Sea Salt, Rosemary, Pistachios, and Candied Citrus",
+                  "category": "dessert",
+                  "tags": ["gluten-free", "vegan"],
+                  "difficulty": "Easy",
+                  "price": "$50",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/1.jpg"
+                },
+                {
+                  "id": "5",
+                  "title": "Pressure Cooker Refried Beans",
+                  "category": "lunch",
+                  "tags": ["vegan", "low-fat"],
+                  "difficulty": "Easy",
+                  "price": "$30",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/2.jpg"
+                },
+                {
+                  "id": "6",
+                  "title": "Beetroot, Spinach, and Coconut Curry",
+                  "category": "dinner",
+                  "tags": ["vegan", "gluten-free"],
+                  "difficulty": "Easy",
+                  "price": "$70",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/3.jpg"
+                },
+                {
+                  "id": "7",
+                  "title": "Traditional Pretzels",
+                  "category": "snack",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$20",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/4.jpg"
+                },
+                {
+                  "id": "8",
+                  "title": "Homemade Crispy Chilli Oil",
+                  "category": "condiment",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$20",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/5.jpg"
+                },
+                {
+                  "id": "9",
+                  "title": "Ultimate Vegan Lasagne",
+                  "category": "dinner",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$34",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/6.jpg"
+                },
+                {
+                  "id": "10",
+                  "title": "Vegan Victoria Sponge Cake",
+                  "category": "dessert",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$52",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/7.jpg"
+                },
+                {
+                  "id": "11",
+                  "title": "Vegan Quiche",
+                  "category": "breakfast",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$35",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/8.jpg"
+                },
+                {
+                  "id": "12",
+                  "title": "Vegan Chocolate Brownies",
+                  "category": "dessert",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$45",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/9.jpg"
+                },
+                {
+                  "id": "13",
+                  "title": "Vegan Blueberry Pancakes",
+                  "category": "breakfast",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$60",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/10.jpg"
+                },
+                {
+                  "id": "14",
+                  "title": "Vegan Sausage Casserole",
+                  "category": "dinner",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$33",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/11.jpg"
+                },
+                {
+                  "id": "15",
+                  "title": "Air Fryer Potato Wedges",
+                  "category": "side dish",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$25",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/12.jpg"
+                },
+                {
+                  "id": "16",
+                  "title": "Potato, Pineapple, and Cashew Curry",
+                  "category": "dinner",
+                  "tags": ["vegan", "gluten-free"],
+                  "difficulty": "Easy",
+                  "price": "$20",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/13.jpg"
+                },
+                {
+                  "id": "17",
+                  "title": "Cauliflower with Olives, Preserved Lemons, and Giant Couscous",
+                  "category": "side dish",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$25",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/14.jpg"
+                },
+                {
+                  "id": "18",
+                  "title": "Easy Rhubarb Cordial",
+                  "category": "drinks",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$15",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/15.jpg"
+                },
+                {
+                  "id": "19",
+                  "title": "Paul A Young’s Vegan Chocolate Truffles",
+                  "category": "dessert",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$15",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/16.jpg"
+                },
+                {
+                  "id": "20",
+                  "title": "Vegan Cabbage Cacciatore",
+                  "category": "dinner",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$25",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/17.jpg"
+                },
+                {
+                  "id": "21",
+                  "title": "Vegan Butternut Squash Risotto with Millet",
+                  "category": "dinner",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$55",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/18.jpg"
+                },
+                {
+                  "id": "22",
+                  "title": "Marmite Parsnips with Poppy Seeds",
+                  "category": "side dish",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$21",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/19.jpg"
+                },
+                {
+                  "id": "23",
+                  "title": "Vegan Tart with Miso, Frangipane, and Onions",
+                  "category": "dessert",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$30",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/20.jpg"
+                },
+                {
+                  "id": "24",
+                  "title": "Confit Parsnip and Carrot Crumble",
+                  "category": "side dish",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$31",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/21.jpg"
+                },
+                {
+                  "id": "25",
+                  "title": "Caramelised Onion, Pear, and Chestnut Stuffing",
+                  "category": "side dish",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$55",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/22.jpg"
+                },
+                {
+                  "id": "26",
+                  "title": "Ultimate Vegan Gravy",
+                  "category": "condiment",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$40",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/23.jpg"
+                },
+                {
+                  "id": "27",
+                  "title": "Leek and Watercress Risotto",
+                  "category": "dinner",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$50",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/24.jpg"
+                },
+                {
+                  "id": "28",
+                  "title": "Pickled Bramble Martini",
+                  "category": "drinks",
+                  "tags": ["vegan"],
+                  "difficulty": "Easy",
+                  "price": "$34",
+                  "description": "",
+                  "image": "https://apipics.s3.amazonaws.com/vegan_api/25.jpg"
+                }
+              ]
+              
+              },
+              {
+                "veganDishes": [
+                  {
+                    "id":"01",
+                    "dishName": "Quinoa Salad",
+                    "ingredients": [
+                      "Quinoa",
+                      "Cherry tomatoes",
+                      "Cucumber",
+                      "Red onion",
+                      "Avocado",
+                      "Lemon juice",
+                      "Olive oil",
+                      "Salt",
+                      "Pepper"
+                    ],
+                    "instructions": "Cook quinoa according to package instructions. Chop vegetables and avocado. Mix quinoa, vegetables, and avocado in a bowl. Drizzle with lemon juice and olive oil. Season with salt and pepper to taste."
+                  },
+                  {
+                    "id":"02",
+                    "dishName": "Chickpea Curry",
+                    "ingredients": [
+                      "Chickpeas",
+                      "Tomatoes",
+                      "Coconut milk",
+                      "Onion",
+                      "Garlic",
+                      "Ginger",
+                      "Curry powder",
+                      "Turmeric",
+                      "Cumin",
+                      "Coriander",
+                      "Salt",
+                      "Cilantro"
+                    ],
+                    "instructions": "Saute chopped onion, garlic, and ginger. Add tomatoes and spices, cook until tomatoes are soft. Add chickpeas and coconut milk, simmer until heated through. Garnish with chopped cilantro."
+                  },
+                  {
+                    "id":"03",
+                    "dishName": "Stir-Fried Tofu with Vegetables",
+                    "ingredients": [
+                      "Tofu",
+                      "Broccoli",
+                      "Bell peppers",
+                      "Carrots",
+                      "Soy sauce",
+                      "Sesame oil",
+                      "Garlic",
+                      "Ginger",
+                      "Green onions",
+                      "Sesame seeds"
+                    ],
+                    "instructions": "Press and cube tofu. Stir-fry tofu until golden. Add chopped vegetables, garlic, and ginger. Cook until vegetables are tender-crisp. Drizzle with soy sauce and sesame oil. Garnish with chopped green onions and sesame seeds."
+                  }
+                ]
+              }
+              
+            ]}
+             
+        
