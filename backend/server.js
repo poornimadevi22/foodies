@@ -4,7 +4,7 @@ const dbconnection=require("./db/database.js");
 const reserveRoute=require('./routes/reserveRoute.js');
 const orderRoute=require("./routes/orderRoute.js")
 
-require("dotenv").config({path:'./config/.env'});
+require("dotenv").config({path:'.env'});
 
 
 //cors middleware

@@ -13,12 +13,13 @@ router.post("/send", (async (req,res,next)=>{
          })
         
      }try { 
-         await  sendReserve.create(firstName,lastName,date,time,phone);
+         await  reservationSchema.create({firstName,lastName,date,time,phone});
          res.status(200).json({
              success:"true",
              message:"Reservation done successfully!!"
          })
      } catch (error) {
+        console.log(error)
          console.error("something went wrong!!!")
      }
     
