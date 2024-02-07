@@ -11,7 +11,7 @@ import NavigationBar from '../components/Navbar';
 const Home = () => {
     return (
         <div>
-           <h3 className='text-center' color={'maroon'}>Welcome to Foodies page</h3>
+           <h1 className='text-center' color={'maroon'}>Welcome to  Vegan Foodies Website</h1>
            <h3 className='text-center text-color:pink'>Don't stop your cravings, come and enjoy your meal here.</h3>
         <Banner />
        

@@ -110,7 +110,7 @@ const Menu = () => {
         <Dropdown.Item href="/menu/dietary/gluten-free">Gluten-Free</Dropdown.Item>
         <Dropdown.Item href="/menu/dietary/vegan">High Protein</Dropdown.Item>
         <Dropdown.Item href="/menu/dietary/low-fat">Low Fat</Dropdown.Item>
-        <Dropdown.Item href="/menu/dietary/">Nut Free</Dropdown.Item>
+       
 
       </Dropdown.Menu>
     </Dropdown>

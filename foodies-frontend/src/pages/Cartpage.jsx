@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import { Alert } from 'react-bootstrap';
+import '../App.css'
 import Button from 'react-bootstrap/Button';
 
 const CartPage = () => {

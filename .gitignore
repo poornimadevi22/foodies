@@ -1,1 +1,4 @@
-node_module
+backend/node_modules
+foodies-frontend/dist
+backend/dist
+foodies-frontend/node_modules

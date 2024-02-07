@@ -21,7 +21,7 @@ const HomePage = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Welcome to Foody Webpage</h3>
+                       
                         <p>Explore our delicious dishes!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -33,18 +33,18 @@ const HomePage = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Welcome to Foody Webpage</h3>
+                        
                         <p>Explore our delicious dishes!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100 h-50"
-                        src="./Foods.png"
+                        src="./foods.png"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Welcome to Foody Webpage</h3>
+                     
                         <p>Explore our delicious dishes!</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -55,30 +55,30 @@ const HomePage = () => {
             <Row>
                 <Col md={4} className="mb-4">
                     <img
-                        src='./dish1.jpg'
-                        alt="Dish 1"
+                        src='https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1g'
+                        // alt="Dish 1"//
                         className="img-thumbnail"
                         style={{borderRadius:'50%'}}
                     />
-                    <p className="text-center mt-2">Dish 1</p>
+                    <p className="text-center mt-2">Vegetabe salad</p>
                 </Col>
                 <Col md={4} className="mb-4">
                     <img
-                        src='./dish3.jpg'
-                        alt="Dish 2"
+                        src='https://images.pexels.com/photos/3607284/pexels-photo-3607284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                        // alt="Dish 2"
                         className="img-thumbnail"
                         style={{borderRadius:'50%'}}
                     />
-                    <p className="text-center mt-2">Dish 2</p>
+                    <p className="text-center mt-2">Healthy Burger with tomato</p>
                 </Col>
                 <Col md={4} className="mb-4">
                     <img
-                        src='./dish2.jpg'
-                        alt="Dish 3"
+                        src='https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+                        // alt="Dish 3"
                         className="img-thumbnail"
-                        style={{borderRadius:'50%'}}
+                        style={{borderRadius:'45%'}}
                     />
-                    <p className="text-center mt-2">Dish 3</p>
+                    <p className="text-center mt-2">Fruit Dessert</p>
                 </Col>
             </Row>
 

@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavigationBar from './components/Navbar';
 import CartPage from './pages/Cartpage';
 import './App.css'
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+    <div><Toaster/></div>
     <NavigationBar />
      <Router>
      <Routes>

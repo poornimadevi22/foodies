@@ -85,10 +85,10 @@ const NavigationBar = () => {
                     type="search"
                     placeholder="Search"
                     className="me-2"
-                    aria-label="Search"
+                    aria-label=""
                     name="searchInput"
                   />
-                  <Button variant="outline-success" type="submit" >Search</Button>
+                  <Button variant="secondary" type="submit" >Search</Button>
                   
                 </Form>
               </Offcanvas.Body>

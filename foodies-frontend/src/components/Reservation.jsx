@@ -2,26 +2,27 @@ import React from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import axios from "axios";
 import { useState } from "react";
-
 import toast from "react-hot-toast";
-import '../App.css'
 import { useNavigate } from "react-router-dom";
+import { Button, Form, Row, Col } from "react-bootstrap";
+import '../App.css';
 
 const Reservation = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(""); // Uncomment this line if you want to collect email
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState("");
   const navigate = useNavigate();
 
   const handleReservation = async (e) => {
+
     e.preventDefault();
     try {
       const { data } = await axios.post(
         "http://localhost:3000/reservation/send",
-        { firstName, lastName, phone, date, time },
+        { firstName, lastName, email, phone, date, time },
         {
           headers: {
             "Content-Type": "application/json",
@@ -29,18 +30,23 @@ const Reservation = () => {
           withCredentials: true,
         }
       );
-       toast.success(data.message);
+      toast.success(data.message);
       setFirstName("");
       setLastName("");
-      setPhone(0);
-      // setEmail("");
+      setEmail("");
+      setPhone("");
       setTime("");
       setDate("");
-      navigate("/success");
+      
+       
+      setTimeout(() => {
+        navigate("/reservation");
+      }, 3000);
     } catch (error) {
-      // console.error(error);
-   toast.error(error.response.data.message);
+      console.error(error);
+      toast.error(error.response.data.message);
     }
+ 
   };
 
   return (
@@ -53,51 +59,77 @@ const Reservation = () => {
           <div className="reservation_form_box">
             <h1>MAKE A RESERVATION</h1>
             <p>For Further Questions, Please Call</p>
-            <form>
-              <div>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-              </div>
-              <div>
-                <input
-                  type="date"
-                  placeholder="Date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                />
-                <input
-                  type="time"
-                  placeholder="Time"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                />
-              </div>
-              <div>
-                <div>
-                <input
-                  type="number"
-                  placeholder="Phone"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                /></div>
-              </div>
-              <button type="submit" onClick={handleReservation}>
-                RESERVE NOW{" "}
-                <span>
-                  <HiOutlineArrowNarrowRight />
-                </span>
-              </button>
-            </form>
+            <Form onSubmit={handleReservation}>
+              <Row>
+                <Col>
+                  <Form.Control
+                    type="text"
+                    placeholder="First Name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
+                </Col>
+                <Col>
+                  <Form.Control
+                    type="text"
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Form.Control
+                    type="date"
+                    placeholder="Date"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                  />
+                </Col>
+                <Col>
+                  <Form.Control
+                    type="time"
+                    placeholder="Time"
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Form.Control
+                    type="tel"
+                    placeholder="Phone"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                </Col>
+                <Col>
+                  <Form.Control
+                    type="email"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  {/* Add another input here as needed */}
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Button type="submit" className="">
+                    RESERVE NOW
+                    {/* <span>
+                      <HiOutlineArrowNarrowRight />
+                    </span> */}
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
           </div>
         </div>
       </div>
