@@ -15,7 +15,7 @@ import '../App.css'; // Import your custom styles if needed
 //           <Row className="about-content">
 //             <Col md={6}>
 //               <div className="image-container">
-//                 <img src="https://static.toiimg.com/photo/84434969.cms" alt="veg" className="veg" />
+//                 <img src={image} alt="veg" className="veg" />
 //               </div>
 //             </Col>
 //             <Col md={6}>
@@ -73,7 +73,7 @@ const AboutUs = () => {
   return (
     <Container className="mt-5">
      <div className="image-container">
-                 <img src="/public/vegan.jpg" alt="veg" className="veg" /> 
+                 <img src='./vegan.jpg' alt="veg" className="veg" /> 
               </div>
       <h1>About Us</h1>
      

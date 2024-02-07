@@ -17,7 +17,7 @@ const HomePage = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 h-50"
-                        src="/public/Food.png"
+                        src="./Food.png"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -29,7 +29,7 @@ const HomePage = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 h-25"
-                        src="/public/Red-Lentil.png"
+                        src="./Red-Lentil.png"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -40,7 +40,7 @@ const HomePage = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 h-50"
-                        src="/public/Foods.png"
+                        src="./Foods.png"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -55,7 +55,7 @@ const HomePage = () => {
             <Row>
                 <Col md={4} className="mb-4">
                     <img
-                        src='/public/dish1.jpg'
+                        src='./dish1.jpg'
                         alt="Dish 1"
                         className="img-thumbnail"
                         style={{borderRadius:'50%'}}
@@ -64,7 +64,7 @@ const HomePage = () => {
                 </Col>
                 <Col md={4} className="mb-4">
                     <img
-                        src='/public/dish3.jpg'
+                        src='./dish3.jpg'
                         alt="Dish 2"
                         className="img-thumbnail"
                         style={{borderRadius:'50%'}}
@@ -73,7 +73,7 @@ const HomePage = () => {
                 </Col>
                 <Col md={4} className="mb-4">
                     <img
-                        src='/public/dish2.jpg'
+                        src='./dish2.jpg'
                         alt="Dish 3"
                         className="img-thumbnail"
                         style={{borderRadius:'50%'}}

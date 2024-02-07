@@ -3,7 +3,6 @@ import Banner from '../components/Banner';
 import About from '../components/About';
 import Qualities from '../components/Qualities';
 import Menu from '../components/Menu';
-import Reservation from '../components/Reservation';
 import CartPage from './Cartpage';
 import {data} from '../data.json';
 import Footer from '../Footer';
@@ -21,7 +20,7 @@ const Home = () => {
        
         {/* <CartPage /> */}
        
-        <Reservation />
+  
        <Footer />
        
         </div>
