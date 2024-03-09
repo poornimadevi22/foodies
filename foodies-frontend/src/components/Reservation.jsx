@@ -52,11 +52,11 @@ const Reservation = () => {
   return (
     <section className="reservation" id="reservation">
       <div className="container">
-        <div className="banner">
+        {/* <div className="banner">
           <img src="./quinoa-stuffed-peppers.jpg" alt="res" />
-        </div>
-        <div className="banner">
-          <div className="reservation_form_box">
+        </div> */}
+        <div className="banner" style={{background:"url('./quinoa-stuffed-peppers.jpg')",opacity:0.9,width:'100%'}}>
+          <div className="reservation_form_box col-3">
             <h1>MAKE A RESERVATION</h1>
             <p>For Further Questions, Please Call</p>
             <Form onSubmit={handleReservation}>

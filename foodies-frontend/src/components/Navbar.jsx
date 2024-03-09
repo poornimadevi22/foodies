@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { SiFoodpanda } from "react-icons/si";
@@ -61,7 +63,8 @@ const NavigationBar = () => {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="/" className="text-light">Home</Nav.Link>
                   <Nav.Link href="/menu" className="text-light">Menu</Nav.Link>
-                  <Nav.Link href="/About" className="text-light">About Us</Nav.Link>
+                  <Nav.Link href="/login" className="text-light">Login</Nav.Link>
+                  <Nav.Link href="/signup" className="text-light">Signup</Nav.Link>
                   <Nav.Link href="/reservation" className="text-light">Reservation</Nav.Link>
                   <Nav.Link href="/cart" className="text-light">Cart</Nav.Link>
 

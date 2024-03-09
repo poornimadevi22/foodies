@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../App.css'; // Import your custom styles if needed
+import '../App.css';
 
 
 function About() {
@@ -13,7 +13,8 @@ function About() {
 
       <p>
         Welcome to Foodies, your go-to place for delicious and nutritious meals. We are passionate about providing
-        high-quality, fresh, and diverse food options to satisfy every palate.
+        high-quality, fresh, and diverse food options to satisfy every palate.We take pride in crafting exceptional dishes with a focus on quality ingredients. 
+        Our commitment to your well-being and the planet drives us to specialize in a unique and healthy vegan foodstyle.
       </p>
 
       <h2>Our Mission</h2>
@@ -28,10 +29,12 @@ function About() {
         dishes. Each member of our team is committed to ensuring that every bite you take is a delight.
       </p>
 
-      <h2>Quality Ingredients</h2>
+      <h2 className='text-color:green'>Quality Ingredients</h2>
       <p>
         We source only the finest and freshest ingredients to craft our dishes. From farm-fresh produce to premium
-        spices, we prioritize quality to bring you a taste that is both wholesome and flavorful.
+        spices,What sets our foodstyle apart is our dedication to using special and thoughtfully selected ingredients. From nutrient-rich superfoods to locally sourced organic produce, each dish is a testament to our commitment to providing you with a unique, wholesome, and guilt-free dining experience.
+         We prioritize quality to bring you a taste that is both wholesome and flavorful.
+         We believe in the power of plant-based living for both personal and environmental well-being. Our vegan foodstyle is not just a culinary choice; it's a celebration of health, compassion, and sustainability.
       </p>
 
       <h2>Contact Us</h2>
@@ -40,18 +43,7 @@ function About() {
         feedback and are here to assist you in any way we can.
       </p>
 
-      <Row className="mt-5">
-        <Col>
-          <h3>Visit Us</h3>
-          <p>123 Main Street,
-            Cityville, Country</p>
-        </Col>
-        <Col>
-          <h3>Contact Information</h3>
-          <p>Email: info@foodies.com</p>
-          <p>Phone: (123) 456-7890</p>
-        </Col>
-      </Row>
+      
     </Container>
   );
 }

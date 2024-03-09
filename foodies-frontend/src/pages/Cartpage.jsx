@@ -72,6 +72,21 @@ const CartPage = () => {
   };
 
   return (
+
+    <React.Fragment>
+      <style>
+        {`
+          body {
+            background: #fcced6;
+            background-size: cover;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background-position: center;
+        
+          }
+        `}
+        </style>
     <Container className="mt-4">
       <h2 className="mb-4">Shopping Cart</h2>
       {cart.length === 0 ? (
@@ -136,6 +151,7 @@ const CartPage = () => {
               </Alert>
             )}
     </Container>
+    </React.Fragment>
   );
 };
 

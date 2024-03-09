@@ -8,7 +8,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Qualities = () => {
   const qualities = [
-    { icon: <CgGym color="darkblue" size={70} />, text: 'Safety Food' },
+    { icon: <CgGym color="darkblue" size={70} />, text: 'Healthy Food' },
     { icon: <GiFoodTruck color="purple" size={70} />, text: 'Fast delivery' },
     { icon: <SlBadge color="green" size={70} />, text: 'Best Quality' },
     // Add more qualities as needed

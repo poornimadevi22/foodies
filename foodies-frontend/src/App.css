@@ -6,27 +6,46 @@ h3{
  color:cadetblue
 }
 
+/* signup */
+.signup {
+  display: flex;
+  min-height: 75vh;
+  padding: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  background: url('../src/assets/vegan.jpg');
+  background-size: cover;
+  background-position: right;
+}
+
+
+
+
+
+/* about page */
 .About{
   position: relative;
 }
 
-.About {
-  display: flex;
-  min-height: 100vh;
+.about {
+  min-height: 75vh;
+  padding: 30px 20px;
   justify-content: center;
   align-items: center;
-  background-color: #9da973;
+   background: url('/assets/vegan.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right; 
 }
-
 
 /* reservation page */
 .reservation {
   display: flex;
   min-height: 75vh;
   padding: 30px 20px;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  background: url('assets/vegan.jpg');
+  /* background: url('assets/vegan.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -42,7 +61,7 @@ h3{
 }
 .reservation .container .banner .reservation_form_box {
   width: 400px;
-  background: #fff;
+  background: #ffffffe3;
   height: 100%;
   padding: 20px;
   box-shadow: -1px 0px 37px 0px rgba(152, 87, 191, 0.75);
@@ -133,7 +152,7 @@ h3{
 }
 .reservation .container .banner:first-child {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .reservation .container .banner img {
   width: 550px;
@@ -143,7 +162,6 @@ h3{
   padding: 8px 36px;
   border-radius: 30px;
   display: flex;
-  width: fit-content;
   margin: 0 auto;
   align-items: center;
   justify-content: center;

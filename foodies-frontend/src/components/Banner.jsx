@@ -5,9 +5,9 @@ import { Container, Row, Col, Carousel } from 'react-bootstrap';
 
 const HomePage = () => {
     const dishFeedbacks = [
-        { name: 'Delicious Pizza', feedback: 'The pizza was amazing! Loved every bite.', image: '/public/pizzajpg.jpg' },
-        { name: 'Tasty Sushi', feedback: 'The sushi was fresh and delicious. Will order again.', image: '/public/Pizza-pasta-f.jpg'},
-        { name: 'Yummy Pasta', feedback: 'The pasta was so flavorful. Great portion size.', image: '/public/sushi.jpg' },
+        { name: 'Delicious Pizza', feedback: 'The pizza was amazing! Loved every bite.', image: './pizza.jpg' },
+        { name: 'Tasty Sushi', feedback: 'The sushi was fresh and delicious. Will order again.', image: './sushi.jpg'},
+        { name: 'Yummy Pasta', feedback: 'The pasta was so flavorful. Great portion size.', image: './Pizza-Pasta-f.jpg' },
     ];
 
     return (
@@ -60,7 +60,7 @@ const HomePage = () => {
                         className="img-thumbnail"
                         style={{borderRadius:'50%'}}
                     />
-                    <p className="text-center mt-2">Vegetabe salad</p>
+                    <p className="text-center mt-2">Vegetable salad</p>
                 </Col>
                 <Col md={4} className="mb-4">
                     <img
