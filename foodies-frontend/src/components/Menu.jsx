@@ -9,10 +9,27 @@ import { useParams } from 'react-router';
 import { Navbar, NavDropdown } from 'react-bootstrap';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
+import authService from '../services/authservice';
 
 const Menu = () => {
     const [cart, setCart] = useState([]);
+    const [dishData, setFilteredDishes] = useState([]);
     const { filterBy, filter } = useParams();
+
+    useEffect(() => {
+      const fetchDishes = async () => {
+        try {
+          const dishesData = await authService.getAllDish();
+          const dishes = dishesData.data;
+          setFilteredDishes(dishes);
+        } catch (error) {
+          console.error('Error fetching dishes:', error);
+        }
+      };
+  
+      fetchDishes();
+    }, []);
+  
     let category=false;
     let tags=false;
     let search=false;
@@ -29,8 +46,7 @@ const Menu = () => {
     }
     console.log("ccc",category,"fff",tags,"ffff",search,filter,filterBy)
   // Filter dishes based on the category and tags
-
-  const filteredDishes = data[0].dishes.filter((dish) => {
+  const filteredDishes = dishData.filter((dish) => {
     const titleMatches = dish?.title?.toLowerCase().includes(filter?.toLowerCase());
     if (category && tags) {
       return dish.category === category && dish.tags.includes(tags);

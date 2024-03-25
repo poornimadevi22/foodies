@@ -33,6 +33,22 @@ const authService = {
     return localStorage.getItem('token');
   },
 
+  addDish: async (dishData) => {
+    try {
+      return await axios.post(`${BASE_URL}/addDish`, dishData);
+    } catch (error) {
+      throw error.response.data;
+    }
+  },
+
+  getAllDish: async()=>{
+    try{
+     return await axios.get(`${BASE_URL}/getAllDish`)
+    }catch(error){
+      throw error.response
+    }
+  },
+
   logout: () => {
     localStorage.removeItem('token');
   },

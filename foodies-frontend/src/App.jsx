@@ -11,7 +11,9 @@ import CartPage from './pages/Cartpage';
 import './App.css';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
+import Admin from './pages/Admin';
 import { Toaster } from 'react-hot-toast';
+
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
@@ -36,6 +38,7 @@ function App() {
        <Route path="/menu/:filterBy?/:filter?"  element={<Menu/>}></Route>
        <Route path="/about"  element={<About/>}></Route>
        <Route path="/reservation"  element={<Reservation/>}></Route>
+       <Route path="/admin"  element={<Admin/>}></Route>
        <Route path="/cart" element={<CartPage/>}></Route>
       { <Route path="/signup"  element={<Signup/>}></Route> }
        {  <Route path="/login"  element={<Login />}></Route> } 

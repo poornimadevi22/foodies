@@ -6,7 +6,7 @@ import '../App.css'
 // import { jwtDecode } from "jwt-decode";
 
 const Register = () => {
-  const [userData, setUserData] = useState({ email: '', password: '' });
+  const [userData, setUserData] = useState({ email: '', password: '', role:'user' });
 
   const handleRegister = async () => {
     try {
@@ -88,6 +88,18 @@ const Register = () => {
                 onChange={(e) => setUserData({ ...userData, password: e.target.value })}
               />
             </div>
+            <div className="form-group">
+                <label htmlFor="role">Role</label>
+                <select
+                  className="form-control"
+                  id="role"
+                  value={userData.role}
+                  onChange={(e) => setUserData({ ...userData, role: e.target.value })}
+                >
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
             <div className="align-items-center"  style={{"marginLeft":"20%", "marginTop":"2%"}}>
             <button type="button" className="btn btn-primary" onClick={handleRegister}>
               Register

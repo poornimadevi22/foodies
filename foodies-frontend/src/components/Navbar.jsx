@@ -4,14 +4,30 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import  Admin from '../pages/Admin'
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { SiFoodpanda } from "react-icons/si";
+import { GiRobotLeg } from "react-icons/gi";
+import * as jwt from 'jwt-decode';
+
 
 
 const NavigationBar = () => {
+  let userRole = null;
+  const jwtToken = localStorage.getItem('token');
+  console.log("f",jwtToken)
+  if (jwtToken) {
+    const decodedToken = jwt.jwtDecode(jwtToken)
+    console.log(decodedToken);
+    userRole = decodedToken.check?.role??decodedToken.role;
+    console.log("f",decodedToken,userRole)
+  }
+  // const userRole = decodedToken ? decodedToken?.role : null;
+
+  // const userRole = decodedToken ? decodedToken.user.role : null;
   const [isSticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -65,10 +81,10 @@ const NavigationBar = () => {
                   <Nav.Link href="/menu" className="text-light">Menu</Nav.Link>
                   <Nav.Link href="/login" className="text-light">Login</Nav.Link>
                   <Nav.Link href="/signup" className="text-light">Signup</Nav.Link>
+                  {userRole === 'admin' && <Nav.Link href="/admin" className="text-light">Admin</Nav.Link>}
                   <Nav.Link href="/reservation" className="text-light">Reservation</Nav.Link>
                   <Nav.Link href="/cart" className="text-light">Cart</Nav.Link>
 
-                  
                   {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-sm`}

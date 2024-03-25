@@ -1,4 +1,3 @@
-// Login.js
 import React, { useState } from 'react';
 import authService from '../services/authservice';
 import toast from "react-hot-toast";
@@ -11,7 +10,7 @@ const Login = () => {
       const data = await authService.login(credentials);
       console.log(data)
       if(data.status===200){
-        toast.success("Logged in successfullyyy..Have a nice meal🧑🐈🐈🐈🐀🐀🐀🧑‍🎄...")
+        toast.success(`Logged in successfullyyy..Have a nice meal🧑🐈🐈🐈🐀🐀🐀🧑‍🎄...`)
         authService.saveToken(data.data.token);
         window.location.href="/"
       }else{
