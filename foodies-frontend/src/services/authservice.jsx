@@ -3,7 +3,7 @@ import axios from 'axios';
 import toast from "react-hot-toast";
 // import { useNavigate } from 'react-router-dom';
 
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL = 'https://foodies-webpage.onrender.com';
 // const navigate = useNavigate();
 const authService = {
 
