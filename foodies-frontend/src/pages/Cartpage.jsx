@@ -44,7 +44,7 @@ const CartPage = () => {
       //   body: JSON.stringify({ items: cart }),
       // });
 
-      if (response.statusText==='OK') {
+      if (response.status===200) {
         // Order submission successful, you can handle success as needed
         console.log('Order submitted successfully!');
         // Clear the cart after a successful order
