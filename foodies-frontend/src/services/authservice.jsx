@@ -1,9 +1,9 @@
-// authService.js
 import axios from 'axios';
 import toast from "react-hot-toast";
 // import { useNavigate } from 'react-router-dom';
 
 const BASE_URL = 'https://foodies-webpage.onrender.com';
+// const BASE_URL = 'http://localhost:4000';
 // const navigate = useNavigate();
 const authService = {
 
@@ -24,6 +24,17 @@ const authService = {
       throw error.response.data;
     }
   },
+
+  createOrder: async (orderData) => {
+    try {
+      return await axios.put(`${BASE_URL}/order/create`, orderData);
+    } catch (error) {
+      console.log("fff",error)
+      throw error.response;
+    }
+  },
+  
+
 
   saveToken: (token) => {
     localStorage.setItem('token', token);

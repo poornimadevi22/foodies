@@ -4,16 +4,6 @@ import { useState ,react } from 'react';
 
 
 const DishForm = () => {
-  <style>
-        {`
-          body {
-            background-color:"ivory";
-            background-size: cover;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-          `}
-          </style>
   const [formData, setFormData] = useState({
     id: '',
     title: '',
@@ -54,7 +44,7 @@ const DishForm = () => {
   };
 
   return (
-    <div>
+    <div style={{background: "darkseagreen"}}>
       <h2>Add new Dish</h2>
       <form onSubmit={handleSubmit} style={{ maxWidth: '400px', margin: '0 auto',  }}>
   <div style={{ marginBottom: '10px' }}>

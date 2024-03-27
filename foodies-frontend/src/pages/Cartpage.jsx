@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
 import { Alert } from 'react-bootstrap';
+import authService from '../services/authservice';
 import '../App.css'
 import Button from 'react-bootstrap/Button';
 
@@ -32,16 +33,18 @@ const CartPage = () => {
 
   const submitOrder = async () => {
     try {
-      // Replace this URL with your actual endpoint for order submission
-      const response = await fetch('http://localhost:3000/order/create', {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ items: cart }),
-      });
+      const response=await authService.createOrder({items:cart})
+      console.log(response,cart);
+      // // Replace this URL with your actual endpoint for order submission
+      // const response = await fetch(`${authService.createOrder}/order/create`, {
+      //   method: 'PUT',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({ items: cart }),
+      // });
 
-      if (response.ok) {
+      if (response.statusText==='OK') {
         // Order submission successful, you can handle success as needed
         console.log('Order submitted successfully!');
         // Clear the cart after a successful order

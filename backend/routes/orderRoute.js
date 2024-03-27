@@ -24,7 +24,7 @@ router.get("/getOrders", (async (req,res,next)=>{
  ));
 
 router.put("/create", (async (req,res,next)=>{
-    const{items}=req.body;
+    const items=req.body;
      if(!items){
          return res.status(500).json({
             success:"false",
@@ -32,7 +32,7 @@ router.put("/create", (async (req,res,next)=>{
          })
         
      }try { 
-         await  orderSchema.create({items:items});
+         await  orderSchema.create(items);
          res.status(200).json({
              success:"true",
              message:"Order created successfully!!"
