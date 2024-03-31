@@ -20,17 +20,9 @@ try{
     cors({origin:true,credentials: true})
     );
 }catch(err){
-  console.log(err)
 }
 
-// const { findById } = require('./models/reservschema.js');
-// // app.use(
-// //   cors({
-// //     origin: [process.env.FRONTEND_URL],
-// //     methods: ["POST"],
-// //     credentials: true,
-// //   })
-// // );
+
 app.use(express.urlencoded({extended:true}));
 app.use('/reservation', reserveRoute);
 // app.use('/send', sendReserve);
@@ -42,7 +34,6 @@ app.get("/", (req, res, next)=>{return res.status(200).json({
     message: "HELLO WORLD"
   })})
 }catch(err){
-  console.log(err)
 }
 
   const JWT_SECRET_KEY = 'secretKey';
@@ -60,7 +51,6 @@ app.get("/", (req, res, next)=>{return res.status(200).json({
     }
   };
 
-console.log("poori",process.env.PORT)
 dbconnection();
 
 
@@ -74,12 +64,10 @@ app.post("/login",async(req,res)=>{
         if (!check) {
           return res.status(401).json({ message: 'Invalid credentials.' });
         }
-        console.log(check)
       
         const token = jwt.sign({check}, JWT_SECRET_KEY);
         res.json({ token });
       } catch (e) {
-        console.log(e)
          res.json("not existing")
      }
 
@@ -105,7 +93,7 @@ app.post('/signup', async (req, res) => {
     // Respond with the token
     res.json({ token });
   } catch (error) {
-    console.error('Error during signup:', error);
+    // console.error('Error during signup:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 });
@@ -120,19 +108,35 @@ app.post('/addDish', async (req, res) => {
     const dishData = await dish.create({title:title,price:price,category:category,image:image,tags:[] });
     res.status(200).json({"msg":"dishes added","dish":dishData})
   }catch(err){
-    console.log('err',err)
     res.status(500).json({ message: 'Internal server error' });
   }
   
     
 })
 
+app.put('/updateDishData/:id', async (req, res) => {
+  const { id } = req.params;
+  try {
+    const updatedDish = await dish.findByIdAndUpdate(id, req.body, { new: true });
+    if (!updatedDish) {
+      return res.status(404).json({ message: 'Dish not found' });
+    }
+    res.json({ message: 'Dish updated successfully', dish: updatedDish });
+  } catch (error) {
+  //   console.error('Error updating dish:', error);
+    res.status(500).json({ message: 'Failed to update dish' });
+  }
+});
+
+app.post("/deleteDish",async(req,res)=>{
+  return res.status(200).json(await dish.deleteOne({_id:req.body.id}));
+
+})
+
 app.get('/getAllDish',async(req,res)=>{
   try{
-    console.log("getting")
     return res.status(200).json(await dish.find({}).exec());
   }catch(err){
-    console.log('err',err)
     res.status(500).json({ message: 'Internal server error' });
   }
 })

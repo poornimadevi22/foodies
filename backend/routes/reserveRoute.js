@@ -19,7 +19,6 @@ router.post("/send", (async (req,res,next)=>{
              message:"Reservation done successfully!!"
          })
      } catch (error) {
-        console.log(error)
          console.error("something went wrong!!!")
      }
     

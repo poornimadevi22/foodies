@@ -8,13 +8,13 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       const data = await authService.login(credentials);
-      console.log(data)
+      // console.log(data)
       if(data.status===200){
         toast.success(`Logged in successfullyyy..Have a nice meal🧑🐈🐈🐈🐀🐀🐀🧑‍🎄...`)
         authService.saveToken(data.data.token);
         window.location.href="/"
       }else{
-        console.log("resp",data)
+        // console.log("resp",data)
         toast.error(data?.message??'internal server error')
       }
     } catch (error) {

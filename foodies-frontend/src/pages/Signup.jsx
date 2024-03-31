@@ -11,9 +11,8 @@ const Register = () => {
   const handleRegister = async () => {
     try {
       const data = await authService.register(userData);
-      console.log("resp",data)
-      // const decoded = token ? jwtDecode(token) : {};
-      // console.log("resp",decoded)
+      // console.log("resp",data)
+
       if(data.status===200){
         toast.success("user registered")
         authService.saveToken(data.data.token);
@@ -25,7 +24,7 @@ const Register = () => {
       }
       
     //   window.location.href="/"
-      // Redirect or do something after successful registration
+     
     } catch (error) {
       console.error('Registration failed', error);
       toast.error(error?.message??'internal server error')

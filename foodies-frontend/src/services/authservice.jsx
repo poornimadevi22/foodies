@@ -1,13 +1,18 @@
 import axios from 'axios';
-import toast from "react-hot-toast";
-// import { useNavigate } from 'react-router-dom';
+import * as jwt from 'jwt-decode';
+import DishForm from '../pages/Admin';
 
-const BASE_URL = 'https://foodies-webpage.onrender.com';
+import toast from "react-hot-toast";
+
+
+ const BASE_URL = 'https://foodies-webpage.onrender.com';
 // const BASE_URL = 'http://localhost:4000';
-// const navigate = useNavigate();
+
+
 const authService = {
 
-   
+
+
   login: async (credentials) => {
     try {
       const response = await axios.post(`${BASE_URL}/login`, credentials);
@@ -29,10 +34,31 @@ const authService = {
     try {
       return await axios.put(`${BASE_URL}/order/create`, orderData);
     } catch (error) {
-      console.log("fff",error)
       throw error.response;
     }
   },
+
+  deleteDish: async (id) => {
+    try {
+      return await axios.post(`${BASE_URL}/deleteDish`, {"id":id});
+    } catch (error) {
+      // console.log("fff",error)
+      throw error.response;
+    }
+  },
+
+  getUserRole: () => {
+    let userRole = null;
+    const jwtToken = localStorage.getItem('token');
+    if (jwtToken) {
+      const decodedToken = jwt.jwtDecode(jwtToken)
+      // console.log(decodedToken);
+      userRole = decodedToken.check?.role??decodedToken.role;
+      // console.log("f",decodedToken,userRole)
+    }
+    return userRole;
+  },
+
   
 
 
@@ -47,6 +73,14 @@ const authService = {
   addDish: async (dishData) => {
     try {
       return await axios.post(`${BASE_URL}/addDish`, dishData);
+    } catch (error) {
+      throw error.response.data;
+    }
+  },
+
+  updateDishData: async (id,dishData) => {
+    try {
+      return await axios.put(`${BASE_URL}/updateDishData/${id}`, dishData);
     } catch (error) {
       throw error.response.data;
     }

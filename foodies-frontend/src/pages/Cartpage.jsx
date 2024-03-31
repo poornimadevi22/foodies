@@ -22,7 +22,7 @@ const CartPage = () => {
   const removeFromCart = (title) => {
     const updatedCart = cart.filter((item) => item.title !== title);
     setCart(updatedCart);
-    // Save cart data to localStorage
+   
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
@@ -34,20 +34,11 @@ const CartPage = () => {
   const submitOrder = async () => {
     try {
       const response=await authService.createOrder({items:cart})
-      console.log(response,cart);
-      // // Replace this URL with your actual endpoint for order submission
-      // const response = await fetch(`${authService.createOrder}/order/create`, {
-      //   method: 'PUT',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ items: cart }),
-      // });
-
+      
+   
       if (response.status===200) {
-        // Order submission successful, you can handle success as needed
+      
         console.log('Order submitted successfully!');
-        // Clear the cart after a successful order
         setOrderSubmitted(true);
         
         setTimeout(() => {
@@ -58,15 +49,11 @@ const CartPage = () => {
         
       } else {
         setOrderError(true);
-        // Handle errors from the server
         console.error('Failed to submit order',response);
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 3000);
       }
     } catch (error) {
       setOrderError(true);
-      // Handle network or other errors
+     
       console.error('Error during order submission:', error);
       // setTimeout(() => {
       //   window.location.reload();

@@ -10,7 +10,7 @@ import '../App.css';
 const Reservation = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState(""); // Uncomment this line if you want to collect email
+  const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [phone, setPhone] = useState("");
@@ -52,9 +52,7 @@ const Reservation = () => {
   return (
     <section className="reservation" id="reservation">
       <div className="container">
-        {/* <div className="banner">
-          <img src="./quinoa-stuffed-peppers.jpg" alt="res" />
-        </div> */}
+     
         <div className="banner" style={{background:"url('./quinoa-stuffed-peppers.jpg')",opacity:0.9,width:'100%'}}>
           <div className="reservation_form_box col-3">
             <h1>MAKE A RESERVATION</h1>
@@ -116,16 +114,14 @@ const Reservation = () => {
               </Row>
               <Row>
                 <Col>
-                  {/* Add another input here as needed */}
+                
                 </Col>
               </Row>
               <Row>
                 <Col>
                   <Button type="submit" className="">
                     RESERVE NOW
-                    {/* <span>
-                      <HiOutlineArrowNarrowRight />
-                    </span> */}
+                    
                   </Button>
                 </Col>
               </Row>
